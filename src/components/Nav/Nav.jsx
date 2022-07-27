@@ -1,15 +1,28 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchWord } from "../../redux/actions/actions";
+import swal from 'sweetalert'
+import './nav.css'
 
 function Nav() {
     const dispatch = useDispatch()
     const [word, setWord] = useState("")
     function search(e) {
         e.preventDefault();
-        dispatch(searchWord(word))
+        //si word está vacio
+        if (word === "") {
+            swal("", "Escribe una palabra", "warning");
+        }
+        else {
+            //si word es texto 
+            if (isNaN(parseInt(word))) dispatch(searchWord(word))
+            //si word no es texto 
+            else swal("", "Tienes que ingresar solo texto", "warning");
+        }
+
         setWord("")
     }
+
     return (
         <nav className="navbar navbar-light bg-dark">
             <div className="container-fluid d-flex justify-content-center">
