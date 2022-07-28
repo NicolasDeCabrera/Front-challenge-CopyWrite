@@ -12,8 +12,8 @@ describe("Home",()=>{
                 <Home/>
             </Provider>
             )
-        const input = home.getByPlaceholderText('Search')
-        const button = home.getByText('Search')
+        const input = home.getByPlaceholderText('Insert text')
+        const button = home.getByText('Send')
         fireEvent.change(input, {target: {value: 'hola'}})
         fireEvent.click(button)
         await screen.findByText('aloh')
@@ -24,8 +24,8 @@ describe("Home",()=>{
                 <Home/>
             </Provider>
             )
-        const input = home.getByPlaceholderText('Search')
-        const button = home.getByText('Search')
+        const input = home.getByPlaceholderText('Insert text')
+        const button = home.getByText('Send')
         fireEvent.change(input, {target: {value: 'ana'}})
         fireEvent.click(button)
         await screen.findByText('Palindromo')
@@ -37,8 +37,8 @@ describe("Home",()=>{
                 <Home/>
             </Provider>
             )
-        const input = home.getByPlaceholderText('Search')
-        const button = home.getByText('Search')
+        const input = home.getByPlaceholderText('Insert text')
+        const button = home.getByText('Send')
         fireEvent.change(input, {target: {value: '123'}})
         fireEvent.click(button)
         await screen.findByText('Tienes que ingresar solo texto')
