@@ -11,3 +11,11 @@ Esta `APP` cuenta con un `Input` el cual ingresamos el texto o frase que queremo
 <p align="center">
   <img width=100% src="src/img/app.png" />
 </p>
+
+### Instrucciones
+
+Para ejecutar cualquier comando debe posicionarse en la misma carpeta donde se encuentra el archivo `package.json`. 
+
+* Correr la App: `npm run dev`
+* Correr todos los tests: `npm test`
+* Correr un test en especifico: `npm test nombre-del-test` Ej: `npm test Home`  

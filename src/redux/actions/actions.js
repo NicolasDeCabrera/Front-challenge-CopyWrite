@@ -9,3 +9,7 @@ export function searchWord(word) {
       })
   };
 }
+
+export function sum(n,n2){
+  return n + n2;
+}

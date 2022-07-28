@@ -15,9 +15,9 @@ function Home() {
                             :
                             words?.map((w, i) =>
                                 w.palindrome ?
-                                    <div className="d-flex align-items-center "><span key={`${w.text}${i}`} className="col-7 col-md-10 rounded-1 result">{w.text}</span> <span className="col-5 col-md-2 palindrome">Palindromo</span></div>
+                                    <div key={`${w.text}${i}`} className="d-flex align-items-center "><span data-testid={`text-${i}`} className="col-6 col-md-9 col-lg-10 rounded-1 result">{w.text}</span> <span data-testid="palindrome" className="col-6 col-md-3 col-lg-2 palindrome">Palindromo</span></div>
                                     :
-                                    <span key={`${w.text}${i}`} className="col-12 rounded-1 result">{w.text}</span>)
+                                    <span key={`${w.text}${i}`} data-testid={`text-${i}`} className="col-12 rounded-1 result">{w.text}</span>)
                         }
 
                     </div>
